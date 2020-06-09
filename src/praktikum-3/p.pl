@@ -3,7 +3,7 @@ prefix([], Xs).
 prefix([X|Xs], [X|Ys]) :- prefix(Xs, Ys).
 
 % postfix1(Xs, Ys): Liste Ys endet mit Liste Xs.
-postfix1(Xs, Ys) :- reverse(Xs, As), reverse(Ys, Bs), prefix(As, Bs).
+postfix1(Xs, Ys) :- reverse(Ys, Bs), prefix(As, Bs), reverse(Xs, As).
 
 % [a, b, c, d, e] -> [e, d, c, b, a]
 %          [d, e] -> [e, d]
